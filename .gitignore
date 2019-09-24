@@ -42,6 +42,7 @@ bower.json
 # Ignore master key for decrypting credentials and more.
 config/initializers/secret_token.rb
 /config/master.key
+/config/mongoid.yml
 
 /public/packs
 /public/packs-test
@@ -57,5 +58,12 @@ yarn-debug.log*
 # Ignore pow environment settings
 .powenv
 
+# for a library or gem, you might want to ignore these files since the code is
+# intended to run in multiple environments; otherwise, check them in:
+Gemfile.lock
+.ruby-version
+.ruby-gemset
+
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
