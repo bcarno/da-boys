@@ -41,6 +41,7 @@ bower.json
 
 # Ignore master key for decrypting credentials and more.
 config/initializers/secret_token.rb
+/config/credentials.yml.enc
 /config/master.key
 /config/mongoid.yml
 
