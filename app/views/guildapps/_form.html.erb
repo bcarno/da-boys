@@ -1,0 +1,43 @@
+<%= form_with model: @guildapp, local: true do |form| %>
+
+	<% if @guildapp.errors.any? %>
+	    <div id="error_explanation">
+	      <h2>
+	        <%= pluralize(@guildapp.errors.count, "error") %> prohibited
+	        this guildapp from being saved:
+	      </h2>
+	      <ul>
+	        <% @guildapp.errors.full_messages.each do |msg| %>
+	          <li><%= msg %></li>
+	        <% end %>
+	      </ul>
+	    </div>
+	<% end %>
+	<p>
+		<%= form.label :name %>
+		<%= form.text_field :name %>
+	</p>
+	<p>
+		<%= form.label :charclass %>
+		<%= form.text_field :charclass %>
+	</p>
+	<p>
+		<%= form.label :level %>
+		<%= form.text_field :level %>
+	</p>
+	<p>
+		<%= form.label :discord %>
+		<%= form.text_field :discord %>
+	</p>
+	<p>
+		<%= form.label :exp %>
+		<%= form.text_area :exp %>
+	</p>
+	<p>
+		<%= form.label :whyus %>
+		<%= form.text_area :whyus %>
+	</p>
+	<p>
+		<%= form.submit %>
+	</p>
+<% end %>
