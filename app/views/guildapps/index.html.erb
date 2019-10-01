@@ -1,0 +1,24 @@
+<h1>Applicants</h1>
+
+<%= link_to 'Submit New Application', new_guildapp_path %>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Class</th>
+		<th>Level</th>
+		<th>Discord</th>
+		<th></th>
+	</tr>
+
+	<% @guildapps.each do |guildapp| %>
+		<tr>
+			<td><%= guildapp.name %></td>
+			<td><%= guildapp.charclass %></td>
+			<td><%= guildapp.level %></td>
+			<td><%= guildapp.discord %></td>
+			<td><%= link_to 'Show', guildapp_path(guildapp) %></td>
+			<td><%= link_to 'Edit', edit_guildapp_path(guildapp) %></td>
+		</tr>
+	<% end %>
+</table>
